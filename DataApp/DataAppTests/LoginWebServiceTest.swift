@@ -76,7 +76,7 @@ class LoginWebServiceTest: XCTestCase {
         let expextions = self.expectation(description: "Failed Request Expextation")
 
       
-        let errorDescription = "local discription of an error"
+        let errorDescription = "local discription of an error."
         MockUrlProtocal.error = LoginNetworkerror.failedRequest(discription:errorDescription)
         // Act
         sut.Login(with: loginRequestModel) { responseModel, error in
