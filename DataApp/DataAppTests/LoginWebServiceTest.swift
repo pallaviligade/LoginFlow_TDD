@@ -74,13 +74,12 @@ class LoginWebServiceTest: XCTestCase {
     func testLoginWebService_WhenURLRequestFailed_ErrorMessageDiscription()  {
         // Arrange
         let expextions = self.expectation(description: "Failed Request Expextation")
-
-      
-        let errorDescription = "local discription of an error."
-        MockUrlProtocal.error = LoginNetworkerror.failedRequest(discription:errorDescription)
+        let errorDescription = "A localized description of an error"
+        MockUrlProtocal.error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: errorDescription])//LoginNetworkerror.failedRequest(discription:errorDescription)
         // Act
         sut.Login(with: loginRequestModel) { responseModel, error in
             //Assert
+            
             XCTAssertEqual(error, LoginNetworkerror.failedRequest(discription:errorDescription))
             expextions.fulfill()
         }
