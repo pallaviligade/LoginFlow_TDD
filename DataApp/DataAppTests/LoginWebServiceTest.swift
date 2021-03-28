@@ -17,7 +17,7 @@ class LoginWebServiceTest: XCTestCase {
         let sessionConfiguration = URLSessionConfiguration.ephemeral
         sessionConfiguration.protocolClasses = [MockUrlProtocal.self]
         let session = URLSession(configuration: sessionConfiguration)
-        
+        // sut = system under test
          sut = LoginWebService(_urlString:ApiConstantsPoints.LoginApi,
                                   _urlsession: session)
         loginRequestModel = LoginRequestModel(firstName:"Pallavi", lastName:"Ligade", userEmail: "pallavi0204@gmail.com", userPassword: "1234")
