@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         let login = LoginWebService(_urlString: "http://appsdeveloperblog.com:8080/signup-mock-service/users")
         let loginRequestModel = LoginRequestModel(firstName:"Sergey", lastName:"Kargoplov", userEmail: "test@gmail.com", userPassword: "1234")
 
-        login.Login(with: loginRequestModel) { loginRequestModel, error in
+        login.Login(withForm: loginRequestModel) { loginRequestModel, error in
             
             print(loginRequestModel)
         }

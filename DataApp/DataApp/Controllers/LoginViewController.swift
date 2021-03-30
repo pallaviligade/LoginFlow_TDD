@@ -8,19 +8,39 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBAction func loginButtonTouchUpInside(_ sender: Any) {
-    }
+    var loginPresenterProtocl:LoginPresenterProtocal?
+    
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var passwordTextFeild: UITextField!
     @IBOutlet weak var emailAddressTextfeild: UITextField!
     @IBOutlet weak var UserNametextfeild: UITextField!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let loginModelValidator = LoginFromModelValidator ()
+        let loginwebService = LoginWebService(_urlString: LoginConstants.signupURLString)
+        
+        if loginPresenterProtocl == nil{
+            loginPresenterProtocl = LoginPresenter(formModelValidator: loginModelValidator, webservice: loginwebService, delegate: self)
+        }
     }
     
-
+    @IBAction func loginButtonTouchUpInside(_ sender: Any) {
+        let loginmodel = LoginModel(firstName: UserNametextfeild.text!, lastName: "Ligade", email: emailAddressTextfeild.text!, password: passwordTextFeild.text!, repeatPassword: "1234")
+        loginPresenterProtocl?.processUserLogin(formModel: loginmodel)
+    }
  
+}
+
+
+extension LoginViewController : LoginViewDelegateProtocol {
+    func successfullSignup() {
+        
+    }
+    
+    func errorHandler(error: LoginNetworkerror) {
+        
+    }
+    
+    
 }

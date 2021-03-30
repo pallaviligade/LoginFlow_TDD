@@ -26,6 +26,16 @@
 		8E8DCE0426096A0700647D31 /* MockLoginValidatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE0326096A0700647D31 /* MockLoginValidatorModel.swift */; };
 		8E8DCE08260F294100647D31 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE07260F294100647D31 /* LoginViewControllerTest.swift */; };
 		8E8DCE0A260F2DFB00647D31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE09260F2DFB00647D31 /* LoginViewController.swift */; };
+		8E8DCE0D2610600700647D31 /* MockLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE0C2610600700647D31 /* MockLoginPresenter.swift */; };
+		8E8DCE102610BE2F00647D31 /* LoginPresenterProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE0F2610BE2F00647D31 /* LoginPresenterProtocal.swift */; };
+		8E8DCE122610BF1B00647D31 /* LoginModelValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE112610BF1B00647D31 /* LoginModelValidatorProtocol.swift */; };
+		8E8DCE142610BFA500647D31 /* LoginWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE132610BFA500647D31 /* LoginWebServiceProtocol.swift */; };
+		8E8DCE162610BFD100647D31 /* LoginViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE152610BFD100647D31 /* LoginViewDelegateProtocol.swift */; };
+		8E8DCE182610C66200647D31 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE172610C66200647D31 /* LoginModel.swift */; };
+		8E8DCE1A2610CF4800647D31 /* MockLoginWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE192610CF4800647D31 /* MockLoginWebServiceTest.swift */; };
+		8E8DCE1D2610CFFC00647D31 /* MockLoginViewDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE1C2610CFFC00647D31 /* MockLoginViewDelegateTest.swift */; };
+		8E8DCE1F2612EE0C00647D31 /* LoginFromModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE1E2612EE0C00647D31 /* LoginFromModelValidator.swift */; };
+		8E8DCE212612F26100647D31 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DCE202612F26100647D31 /* LoginConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +81,16 @@
 		8E8DCE0326096A0700647D31 /* MockLoginValidatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginValidatorModel.swift; sourceTree = "<group>"; };
 		8E8DCE07260F294100647D31 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		8E8DCE09260F2DFB00647D31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E8DCE0C2610600700647D31 /* MockLoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginPresenter.swift; sourceTree = "<group>"; };
+		8E8DCE0F2610BE2F00647D31 /* LoginPresenterProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocal.swift; sourceTree = "<group>"; };
+		8E8DCE112610BF1B00647D31 /* LoginModelValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelValidatorProtocol.swift; sourceTree = "<group>"; };
+		8E8DCE132610BFA500647D31 /* LoginWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebServiceProtocol.swift; sourceTree = "<group>"; };
+		8E8DCE152610BFD100647D31 /* LoginViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegateProtocol.swift; sourceTree = "<group>"; };
+		8E8DCE172610C66200647D31 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8E8DCE192610CF4800647D31 /* MockLoginWebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginWebServiceTest.swift; sourceTree = "<group>"; };
+		8E8DCE1C2610CFFC00647D31 /* MockLoginViewDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginViewDelegateTest.swift; sourceTree = "<group>"; };
+		8E8DCE1E2612EE0C00647D31 /* LoginFromModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFromModelValidator.swift; sourceTree = "<group>"; };
+		8E8DCE202612F26100647D31 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +141,7 @@
 		8E50886C2604F5A9006CFD02 /* DataApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DCE0E2610BDDA00647D31 /* Protocals */,
 				8E50889F2604F5CA006CFD02 /* Controllers */,
 				8E50889E2604F5C4006CFD02 /* Model */,
 				8E50889D2604F5BA006CFD02 /* Network */,
@@ -138,6 +159,8 @@
 		8E5088832604F5AD006CFD02 /* DataAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DCE1B2610CFB300647D31 /* Controller */,
+				8E8DCE0B26105FC600647D31 /* Mock */,
 				8E5088862604F5AD006CFD02 /* Info.plist */,
 				8E5088A22604F64F006CFD02 /* LoginWebServiceTest.swift */,
 				8E5088AA26064722006CFD02 /* MockUrlProtocal.swift */,
@@ -172,6 +195,9 @@
 				8E5088A42604F6B6006CFD02 /* LoginRequestModel.swift */,
 				8E5088A62604F765006CFD02 /* LoginResponseModel.swift */,
 				8E5088AC26064CCE006CFD02 /* ApiEndPoints.swift */,
+				8E8DCE172610C66200647D31 /* LoginModel.swift */,
+				8E8DCE1E2612EE0C00647D31 /* LoginFromModelValidator.swift */,
+				8E8DCE202612F26100647D31 /* LoginConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +209,34 @@
 				8E8DCE09260F2DFB00647D31 /* LoginViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8E8DCE0B26105FC600647D31 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DCE0C2610600700647D31 /* MockLoginPresenter.swift */,
+				8E8DCE192610CF4800647D31 /* MockLoginWebServiceTest.swift */,
+				8E8DCE1C2610CFFC00647D31 /* MockLoginViewDelegateTest.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8E8DCE0E2610BDDA00647D31 /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DCE0F2610BE2F00647D31 /* LoginPresenterProtocal.swift */,
+				8E8DCE112610BF1B00647D31 /* LoginModelValidatorProtocol.swift */,
+				8E8DCE132610BFA500647D31 /* LoginWebServiceProtocol.swift */,
+				8E8DCE152610BFD100647D31 /* LoginViewDelegateProtocol.swift */,
+			);
+			path = Protocals;
+			sourceTree = "<group>";
+		};
+		8E8DCE1B2610CFB300647D31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,13 +372,20 @@
 				8E5088A72604F765006CFD02 /* LoginResponseModel.swift in Sources */,
 				8E5088A12604F621006CFD02 /* LoginWebService.swift in Sources */,
 				8E5088A52604F6B6006CFD02 /* LoginRequestModel.swift in Sources */,
+				8E8DCE212612F26100647D31 /* LoginConstants.swift in Sources */,
 				8E8DCE002609608B00647D31 /* LoginPresenter.swift in Sources */,
+				8E8DCE102610BE2F00647D31 /* LoginPresenterProtocal.swift in Sources */,
+				8E8DCE142610BFA500647D31 /* LoginWebServiceProtocol.swift in Sources */,
 				8E5088AD26064CCE006CFD02 /* ApiEndPoints.swift in Sources */,
+				8E8DCE122610BF1B00647D31 /* LoginModelValidatorProtocol.swift in Sources */,
 				8E5088722604F5A9006CFD02 /* ViewController.swift in Sources */,
 				8E50886E2604F5A9006CFD02 /* AppDelegate.swift in Sources */,
+				8E8DCE182610C66200647D31 /* LoginModel.swift in Sources */,
 				8E5088702604F5A9006CFD02 /* SceneDelegate.swift in Sources */,
+				8E8DCE1F2612EE0C00647D31 /* LoginFromModelValidator.swift in Sources */,
 				8E8DCE0A260F2DFB00647D31 /* LoginViewController.swift in Sources */,
 				8E5088AF26065360006CFD02 /* LoginNetworkerror.swift in Sources */,
+				8E8DCE162610BFD100647D31 /* LoginViewDelegateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,9 +393,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8DCE0D2610600700647D31 /* MockLoginPresenter.swift in Sources */,
 				8E5088AB26064722006CFD02 /* MockUrlProtocal.swift in Sources */,
 				8E8DCDFE26095E9B00647D31 /* LoginPresenterTest.swift in Sources */,
+				8E8DCE1D2610CFFC00647D31 /* MockLoginViewDelegateTest.swift in Sources */,
 				8E8DCE08260F294100647D31 /* LoginViewControllerTest.swift in Sources */,
+				8E8DCE1A2610CF4800647D31 /* MockLoginWebServiceTest.swift in Sources */,
 				8E8DCE0426096A0700647D31 /* MockLoginValidatorModel.swift in Sources */,
 				8E5088A32604F64F006CFD02 /* LoginWebServiceTest.swift in Sources */,
 			);
