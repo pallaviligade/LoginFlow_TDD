@@ -163,10 +163,7 @@
 				8E8DCE0B26105FC600647D31 /* Mock */,
 				8E5088862604F5AD006CFD02 /* Info.plist */,
 				8E5088A22604F64F006CFD02 /* LoginWebServiceTest.swift */,
-				8E5088AA26064722006CFD02 /* MockUrlProtocal.swift */,
-				8E8DCDFD26095E9B00647D31 /* LoginPresenterTest.swift */,
 				8E8DCE0326096A0700647D31 /* MockLoginValidatorModel.swift */,
-				8E8DCE07260F294100647D31 /* LoginViewControllerTest.swift */,
 			);
 			path = DataAppTests;
 			sourceTree = "<group>";
@@ -216,6 +213,7 @@
 			children = (
 				8E8DCE0C2610600700647D31 /* MockLoginPresenter.swift */,
 				8E8DCE192610CF4800647D31 /* MockLoginWebServiceTest.swift */,
+				8E5088AA26064722006CFD02 /* MockUrlProtocal.swift */,
 				8E8DCE1C2610CFFC00647D31 /* MockLoginViewDelegateTest.swift */,
 			);
 			path = Mock;
@@ -235,6 +233,8 @@
 		8E8DCE1B2610CFB300647D31 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DCDFD26095E9B00647D31 /* LoginPresenterTest.swift */,
+				8E8DCE07260F294100647D31 /* LoginViewControllerTest.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
