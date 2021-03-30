@@ -36,7 +36,7 @@ class LoginWebServiceTest: XCTestCase {
         MockUrlProtocal.stubResponse = jsonData.data(using: .utf8)
         let expention = self.expectation(description: "Login response expectation")
         // Act
-        sut.Login(with: loginRequestModel) { loginResponseModel, error in
+        sut.Login(withForm: loginRequestModel) { loginResponseModel, error in
             XCTAssertEqual(loginResponseModel?.status, "ok")
             expention.fulfill()
         }
@@ -49,7 +49,7 @@ class LoginWebServiceTest: XCTestCase {
         MockUrlProtocal.stubResponse = jsonData.data(using: .utf8)
         let expention = self.expectation(description: "Login response contanins differnt json")
         // Act
-        sut.Login(with: loginRequestModel) { loginResponseModel, error in
+        sut.Login(withForm: loginRequestModel) { loginResponseModel, error in
             XCTAssertNil(loginResponseModel)//,"Login response Model contains unknow json it should have nil")
             XCTAssertEqual(error,LoginNetworkerror.LoginErrorforModel,"does not match Return error")
             expention.fulfill()
@@ -62,7 +62,7 @@ class LoginWebServiceTest: XCTestCase {
            let expectation = self.expectation(description: "An Empty url string expectation")
         //Act
         
-        sut.Login(with:loginRequestModel) { loginResponseModel, error in
+        sut.Login(withForm:loginRequestModel) { loginResponseModel, error in
             //Assert
             XCTAssertEqual(error, LoginNetworkerror.InvalidRequestUrl)
             expectation.fulfill()
@@ -77,7 +77,7 @@ class LoginWebServiceTest: XCTestCase {
         let errorDescription = "A localized description of an error"
         MockUrlProtocal.error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: errorDescription])//LoginNetworkerror.failedRequest(discription:errorDescription)
         // Act
-        sut.Login(with: loginRequestModel) { responseModel, error in
+        sut.Login(withForm: loginRequestModel) { responseModel, error in
             //Assert
             
             XCTAssertEqual(error, LoginNetworkerror.failedRequest(discription:errorDescription))

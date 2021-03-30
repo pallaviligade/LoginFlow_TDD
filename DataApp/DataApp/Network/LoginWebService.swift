@@ -6,7 +6,9 @@
 //
 
 import Foundation
-class LoginWebService {
+class LoginWebService : LoginWebServiceProtocol{
+   
+    
     // #MARK: - Store Variables 
     private var urlString: String
     private var session : URLSession
@@ -16,7 +18,7 @@ class LoginWebService {
         self.session = _urlsession
     }
     
-    func Login(with fromModel:LoginRequestModel , ComplicationHandler:@escaping(LoginResponseModel?,LoginNetworkerror?)-> Void)
+    func Login(withForm fromModel:LoginRequestModel , completionHandler ComplicationHandler:@escaping(LoginResponseModel?,LoginNetworkerror?)-> Void)
     {
         guard let url = URL(string: urlString) else{
             ComplicationHandler(nil,LoginNetworkerror.InvalidRequestUrl)

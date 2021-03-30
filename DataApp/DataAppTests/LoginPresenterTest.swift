@@ -22,15 +22,18 @@ class LoginPresenterTest: XCTestCase {
         // Arrange
         let loginModel = LoginRequestModel(firstName: "Pallavi", lastName: "Ligade", userEmail: "pallavi0204@gmail.com", userPassword: "123")
         
-        let mockvalidator = MockLoginValidatorModel()
-        let sut = LoginPresenter()
+        let mockloginvalidator = MockLoginValidatorModel ()
+        let mockwebserviceProtocol = MockLoginWebServiceTest ()
+        let mockloginviewDelegate = MockLoginViewDelegateTest()
+        
+        let sut = LoginPresenter(formModelValidator: mockloginvalidator, webservice: mockwebserviceProtocol, delegate: mockloginviewDelegate)
         
         // Act
-        sut.processUser(from: loginModel)
+        //sut.processUserLogin(formModel: loginModel)
         
         // Assert
         
-        XCTAssertTrue(mockvalidator.isFirstNameValidator)
+        XCTAssertTrue(mockloginvalidator.isFirstNameValidator,"The first name was not validated")
         
     }
 
