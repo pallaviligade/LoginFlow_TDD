@@ -17,27 +17,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-do-s7B">
-                                <rect key="frame" x="159" y="411" width="46" height="30"/>
+                                <rect key="frame" x="159" y="301" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="LoginButton"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="loginButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zs9-vH-6AG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="un2-Gg-ZNh">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="un2-Gg-ZNh">
                                 <rect key="frame" x="20" y="79" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="UserName"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0UK-sp-Fh2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0UK-sp-Fh2">
                                 <rect key="frame" x="20" y="141" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="EmailID"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-6Y-Xh7">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-6Y-Xh7">
                                 <rect key="frame" x="20" y="207" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Password"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -45,9 +46,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="top" secondItem="0UK-sp-Fh2" secondAttribute="bottom" constant="32" id="3mC-Hm-crU"/>
+                            <constraint firstItem="WFm-do-s7B" firstAttribute="top" secondItem="EJy-6Y-Xh7" secondAttribute="bottom" constant="60" id="Bix-sm-6QV"/>
                             <constraint firstItem="WFm-do-s7B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="ECZ-ao-5z7"/>
-                            <constraint firstItem="WFm-do-s7B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="367" id="K8R-ni-TvE"/>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="HZq-e0-KHi"/>
+                            <constraint firstItem="un2-Gg-ZNh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="Hvl-dY-hpu"/>
+                            <constraint firstItem="WFm-do-s7B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="257" id="K8R-ni-TvE"/>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="leading" secondItem="0UK-sp-Fh2" secondAttribute="leading" id="XKf-14-SDD"/>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="trailing" secondItem="un2-Gg-ZNh" secondAttribute="trailing" id="aYF-uy-W5L"/>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="leading" secondItem="un2-Gg-ZNh" secondAttribute="leading" id="hon-zA-VGZ"/>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k95-ZE-NKP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WFm-do-s7B" secondAttribute="trailing" symbolic="YES" id="uyY-VN-u8D"/>
+                            <constraint firstItem="EJy-6Y-Xh7" firstAttribute="trailing" secondItem="0UK-sp-Fh2" secondAttribute="trailing" id="vP6-7j-rY4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="61.607142857142854"/>
+            <point key="canvasLocation" x="114" y="-15"/>
         </scene>
     </scenes>
     <resources>

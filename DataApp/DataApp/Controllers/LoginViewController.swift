@@ -39,7 +39,13 @@ extension LoginViewController : LoginViewDelegateProtocol {
     }
     
     func errorHandler(error: LoginNetworkerror) {
-        
+        let alert = UIAlertController(title: "Error", message: "Your request can not be procces at this time", preferredStyle: .alert)
+    
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            alert.view.accessibilityIdentifier = "errordialog"
+            self.present(alert, animated: false, completion: nil)
+        }
     }
     
     

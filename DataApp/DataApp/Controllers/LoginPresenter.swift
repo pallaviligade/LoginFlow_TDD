@@ -7,9 +7,10 @@
 
 import Foundation
 class LoginPresenter: LoginPresenterProtocal {
+   
     
     
-  private   var formModelValidator : LoginModelValidatorProtocol
+   private  var formModelValidator : LoginModelValidatorProtocol
    private  var webservice: LoginWebServiceProtocol
     private weak var delegate: LoginViewDelegateProtocol?
   
@@ -22,18 +23,22 @@ class LoginPresenter: LoginPresenterProtocal {
     func processUserLogin(formModel: LoginModel) {
         
         if !formModelValidator.isFirstNameValid(firstName: formModel.firstName) {
+            delegate?.errorHandler(error: LoginNetworkerror.InvalidFirstName)
             return
         }
         
         if !formModelValidator.isLastNameValid(lastName: formModel.lastName) {
+            delegate?.errorHandler(error: LoginNetworkerror.InvalidlastName)
             return
         }
         
         if !formModelValidator.isValidEmailFormat(email: formModel.email) {
+            delegate?.errorHandler(error: LoginNetworkerror.InvalidEmailID)
             return
         }
         
         if !formModelValidator.isPasswordValid(password: formModel.password) {
+            delegate?.errorHandler(error: LoginNetworkerror.InvalidEmailID)
             return
         }
         

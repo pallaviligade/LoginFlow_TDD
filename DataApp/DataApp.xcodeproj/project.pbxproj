@@ -13,7 +13,7 @@
 		8E5088752604F5A9006CFD02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5088732604F5A9006CFD02 /* Main.storyboard */; };
 		8E5088772604F5AD006CFD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5088762604F5AD006CFD02 /* Assets.xcassets */; };
 		8E50887A2604F5AD006CFD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5088782604F5AD006CFD02 /* LaunchScreen.storyboard */; };
-		8E5088902604F5AD006CFD02 /* DataAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50888F2604F5AD006CFD02 /* DataAppUITests.swift */; };
+		8E5088902604F5AD006CFD02 /* LoginFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50888F2604F5AD006CFD02 /* LoginFlowUITests.swift */; };
 		8E5088A12604F621006CFD02 /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5088A02604F621006CFD02 /* LoginWebService.swift */; };
 		8E5088A32604F64F006CFD02 /* LoginWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5088A22604F64F006CFD02 /* LoginWebServiceTest.swift */; };
 		8E5088A52604F6B6006CFD02 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5088A42604F6B6006CFD02 /* LoginRequestModel.swift */; };
@@ -67,7 +67,7 @@
 		8E5088802604F5AD006CFD02 /* DataAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5088862604F5AD006CFD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E50888B2604F5AD006CFD02 /* DataAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E50888F2604F5AD006CFD02 /* DataAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAppUITests.swift; sourceTree = "<group>"; };
+		8E50888F2604F5AD006CFD02 /* LoginFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowUITests.swift; sourceTree = "<group>"; };
 		8E5088912604F5AD006CFD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5088A02604F621006CFD02 /* LoginWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
 		8E5088A22604F64F006CFD02 /* LoginWebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebServiceTest.swift; sourceTree = "<group>"; };
@@ -163,7 +163,6 @@
 				8E8DCE0B26105FC600647D31 /* Mock */,
 				8E5088862604F5AD006CFD02 /* Info.plist */,
 				8E5088A22604F64F006CFD02 /* LoginWebServiceTest.swift */,
-				8E8DCE0326096A0700647D31 /* MockLoginValidatorModel.swift */,
 			);
 			path = DataAppTests;
 			sourceTree = "<group>";
@@ -171,7 +170,7 @@
 		8E50888E2604F5AD006CFD02 /* DataAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8E50888F2604F5AD006CFD02 /* DataAppUITests.swift */,
+				8E50888F2604F5AD006CFD02 /* LoginFlowUITests.swift */,
 				8E5088912604F5AD006CFD02 /* Info.plist */,
 			);
 			path = DataAppUITests;
@@ -213,8 +212,9 @@
 			children = (
 				8E8DCE0C2610600700647D31 /* MockLoginPresenter.swift */,
 				8E8DCE192610CF4800647D31 /* MockLoginWebServiceTest.swift */,
-				8E5088AA26064722006CFD02 /* MockUrlProtocal.swift */,
+				8E8DCE0326096A0700647D31 /* MockLoginValidatorModel.swift */,
 				8E8DCE1C2610CFFC00647D31 /* MockLoginViewDelegateTest.swift */,
+				8E5088AA26064722006CFD02 /* MockUrlProtocal.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -223,8 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				8E8DCE0F2610BE2F00647D31 /* LoginPresenterProtocal.swift */,
-				8E8DCE112610BF1B00647D31 /* LoginModelValidatorProtocol.swift */,
 				8E8DCE132610BFA500647D31 /* LoginWebServiceProtocol.swift */,
+				8E8DCE112610BF1B00647D31 /* LoginModelValidatorProtocol.swift */,
 				8E8DCE152610BFD100647D31 /* LoginViewDelegateProtocol.swift */,
 			);
 			path = Protocals;
@@ -408,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E5088902604F5AD006CFD02 /* DataAppUITests.swift in Sources */,
+				8E5088902604F5AD006CFD02 /* LoginFlowUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
